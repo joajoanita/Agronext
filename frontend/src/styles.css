@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    color-scheme:light dark;
+}
+
+body{
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold ;
+    background-color: #D7E9D8;
+    box-sizing: content-box;
+
+} 
+

@@ -1,0 +1,32 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">  
+        <div class="container w-50">
+            <div class="bg-white d-flex justify-content-center mt-4 rounded row " > 
+                <div class="green my-3 rounded px-5 py-2 text-center w-75 ">
+                    <h1 class="text-uppercase font-weight-bold ">Control de acceso</h1>
+                </div>
+
+                <!-- Errores -->
+                <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+                    {{ errors?.email }}
+                </div>
+                <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+                    {{ errors?.password }}
+                </div>
+                <div *ngIf="errors?.error" class="alert alert-danger mt-3">
+                    {{ errors?.error }}
+                </div>
+
+                <!-- Formulario de inicio de sesión -->
+
+                <div class="form-group w-50">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control mb-4" placeholder="Correo electrónico" formControlName="email">
+                    <label for="email">Contraseña:</label>
+                    <input type="password" id="password" class="form-control mb-4" placeholder="Introduce tu contraseña" formControlName="password">
+                    <button class="btn btn-success float-end mb-3" type="submit">Envíar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
