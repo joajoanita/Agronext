@@ -2,8 +2,8 @@
 <div class="auth-wrapper">
     <form class="form-singin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="container w-50">
-            <div class="bg-white d-flex justify-content-center mt-4 rounded row " > 
-                <div class="green my-3 rounded px-5 py-2 text-center w-75 ">
+            <div class="bg-white d-flex justify-content-center mt-4 rounded-4 row " > 
+                <div class="green my-5  px-5 py-2 text-center w-75 ">
                     <h1 class="text-uppercase font-weight-bold ">Control de acceso</h1>
                 </div>
 
@@ -32,6 +32,7 @@
                     <input type="password" id="password" class="form-control mb-4" placeholder="Introduce tu contraseña" formControlName="password">
                     <label>Confirma la contraseña:</label>
                     <input type="password" id="password-confirmation" class="form-control mb-4" placeholder="Introduce tu contraseña" formControlName="password_confirmation">
+                    
                     <button class="btn btn-success float-end mb-3" type="submit">Registrarse</button>
                 </div>
             </div>

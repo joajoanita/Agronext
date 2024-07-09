@@ -11,6 +11,14 @@ export class User {
   profile_img!: String;
 }
 
+export class blogPost {
+  title!: String;
+  description!: String;
+  blogImage!: String;
+  blogTag!: String;
+  id_user!: String;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -31,4 +39,15 @@ export class AuthService {
   profileUser(): Observable<any> {
     return this.http.get('http://127.0.0.1:8000/api/auth/user-profile');
   }
+
+  //Hacer post de blog
+  blogPosts(postData: any): Observable<any> { 
+    return this.http.post('http://127.0.0.1:8000/api/auth/blogPost', postData);
+  }
+
+  getBlogPosts(): Observable<any> {
+    return this.http.get('http://127.0.0.1:8000/api/auth/blogPost');
+  }
+
+  
 }

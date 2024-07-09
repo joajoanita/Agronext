@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth-interceptor.service';
 import { ComponentsModule } from './components/components.module';
+import { ViewsModule } from './views/views.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -23,7 +25,9 @@ import { ComponentsModule } from './components/components.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ComponentsModule
+    ComponentsModule,
+    ViewsModule,
+    NoopAnimationsModule
   ],
   providers: [
     {

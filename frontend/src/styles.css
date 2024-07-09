@@ -6,9 +6,87 @@
 
 body{
     font-family: "Varela Round", sans-serif;
-    font-weight: bold ;
     background-color: #D7E9D8;
     box-sizing: content-box;
 
 } 
 
+.btn-dark-green{
+    background-color: #0B650C;
+    color: white;
+}
+
+.btn-blue{
+    background-color: #1E2E93 ; 
+    color:white;
+}
+
+.btn-green{
+    background-color: #B5E660;
+}
+
+.olive-green{
+    color:#4D8E42;
+}
+
+.green {
+    color:#0B650C;
+}
+
+
+.text-font{
+    font-family: "Work Sans", sans-serif;
+}
+
+.light-green{
+    color:#1EBC21;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+
+h1{
+    font-size: 49px;
+}
+
+h3{
+    font-size: 27.3px;
+}
+
+p {
+    font-size: 1.25rem; /* Tamaño de texto base */
+  }
+
+  @media (max-width: 1200px) {
+    p {
+      font-size: 1rem; /* Ajuste para pantallas más pequeñas */
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    p {
+      font-size: 1rem; /* Ajuste para pantallas medianas */
+    }
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.875rem; /* Ajuste para pantallas pequeñas */
+    }
+  }
+
+  @media (max-width: 576px) {
+    p {
+      font-size: 0.75rem; /* Ajuste para pantallas extra pequeñas */
+    }
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

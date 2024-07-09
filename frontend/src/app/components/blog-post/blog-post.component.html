@@ -1,0 +1,29 @@
+<!-- Aquí vendrá un formulario para la creación del blog -->
+<div class="container mt-3">
+  <div class=" d-flex justify-content-end">
+    <button type="button" class="btn btn-dark-green shadow" routerLink="/blog">Volver a atrás</button>
+  </div>
+    <h2 class="fw-bold text-uppercase ">Añadir Nuevo Blog Post</h2>
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" id="title" class="form-control" placeholder="Título de tu noticia" maxlength="30" formControlName="title">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Cuerpo de la noticia</label>
+        <textarea id="description" class="form-control" placeholder="Introduce el cuerpo de la noticia" rows="15" maxlength="255" formControlName="description"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="blogImage" class="form-label">Imagen del Blog</label>
+        <input type="text" id="blogImage" class="form-control" placeholder="URL de la imagen del blog" formControlName="blogImage">
+      </div>
+      <div class="mb-3">
+        <label for="blogTag" class="form-label">Etiqueta del Blog</label>
+        <input type="text" id="blogTag" class="form-control" placeholder="Etiqueta del blog" formControlName="blogTag">
+      </div>
+      <button type="submit" class="btn btn-dark-green mb-4" [disabled]="blogForm.invalid">Añadir Blog Post</button>
+    </form>
+  </div>
+  
+
+

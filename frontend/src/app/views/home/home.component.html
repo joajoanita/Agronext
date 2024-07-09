@@ -1,0 +1,50 @@
+<section>
+    <div class="container text-md">
+        <div class="bg-white d-flex justify-content-center mt-4 rounded-4 row text-font" >
+            <div class="green my-3 rounded px-5 py-2 text-justify w-90 ">
+                <h1 class=" text-uppercase fw-bold">Con Agronext mejorarás tus cultivos</h1>
+                <h3 class="class light-green text-uppercase fw-bold">¿Pierdes mucha cosecha y no sabes cómo mejorar tu productividad?</h3>
+                <p class="text-black fw-normal">AgroNext te ayuda a mejorar la <strong>calidad</strong> y la <strong>cantidad</strong> de tus cosechas mediante su gran tecnología de <strong>sensores</strong> y utilizando una técnica revolucionaria, la <strong>hidroponía.</strong></p>
+            </div>
+        </div>
+        <div class="bg-white d-flex justify-content-center mt-5 rounded-4 row text-font">
+            <div class="green my-3 px-5 py-2 text-center w-90 row">
+                <h1 class="text-uppercase fw-bold">¿Qué es lo que hacemos?</h1>
+                <h3 class="text-uppercase fw-bold light-green">Queremos facilitarte el proceso del cultivo por lo que ofrecemos lo siguiente:</h3>
+                <div class="d-flex olive-green text-uppercase fw-bold">
+                    <div>
+                        <img class="w-75 mx-3 mt-3 img-fluid rounded shadow" src="../../../assets/pictures/formacion.jpg">
+                        <p class="mt-2 responsive-text">1. Monitorización</p>
+                    </div>
+                    <div>
+                        <img class="w-75 mx-3 mt-3 img-fluid rounded shadow" src="../../../assets/pictures/formacion.jpg">
+                        <p class="mt-2 responsive-text">2. Formación</p>
+                    
+                    </div>
+                    <div>
+                        <img class="w-75 mx-3 mt-3 img-fluid rounded shadow" src="../../../assets/pictures/formacion.jpg">
+                        <p class="mt-2 responsive-text">3. Acceso a datos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4 gap-4  text-font">
+            <button class="btn btn-blue rounded-5 px-4 fw-medium shadow">Conócenos</button>
+            <button class="btn btn-green rounded-5 px-4 fw-medium shadow">Contáctanos</button>
+        </div>
+        <div class="bg-white d-flex justify-content-center mt-4 rounded-4 row text-font">
+            <div class="green my-3 px-5 py-2 w-90 row">
+                <h1 class="text-uppercase fw-bold">últimas noticias</h1>
+                    <div class="d-flex flex-wrap">
+                        <div *ngFor="let blog of blogPosts.slice(0,3)" class="olive-green text-uppercase fw-bold text-center" style="flex: 0 0 33%;">
+                          <div class="">
+                            <img class="w-75 mx-3 mt-3 img-fluid rounded shadow" src=" {{blog.blogImage}}">
+                            <p class="mt-2 ">{{ blog.title }}</p>
+                          </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   errors: any = null;
+  selectedFile: File | null = null;
 
   constructor(
     public router: Router,
@@ -23,6 +24,7 @@ export class RegisterComponent implements OnInit {
       email: [''],
       password: [''],
       password_confirmation: [''],
+      profile_img: [null]
     });
   }
 
@@ -41,5 +43,8 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['login']);
       }
     );
+  }
+  onFileChange(event: any) {
+    this.selectedFile = event.target.files[0];
   }
 }

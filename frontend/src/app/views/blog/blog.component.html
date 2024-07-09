@@ -1,0 +1,20 @@
+<!-- Aquí vendrá la visualización de los post del blog -->
+<div *ngIf="isSignedIn" class="container">
+  <div class="mt-3 d-flex justify-content-end">
+    <button type="button" class="btn btn-dark-green shadow" routerLink="/blogPost">Crear entrada de blog</button>
+  </div>  
+</div>
+
+
+<div class="container mt-5">
+    <h2>Listado de Blog Posts</h2>
+    <ul class="list-group">
+      <li *ngFor="let post of blogPosts" class="list-group-item">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <p>Etiquetas: {{ post.blogTag }}</p>
+      </li>
+    </ul>
+  </div>
+
+
