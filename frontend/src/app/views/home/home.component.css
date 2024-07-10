@@ -1,2 +1,6 @@
-
+.height-img{
+    height: 267px;
+    object-fit: cover;
+    width: 267px !important;
+}
 

@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     UserProfileComponent,
     NavbarComponent,
     BlogPostComponent,
-    FooterComponent  
+    FooterComponent,
+    SliderComponent  
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     UserProfileComponent,
     NavbarComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    SliderComponent,
+    FooterComponent
   ]
 })
 export class ComponentsModule { }

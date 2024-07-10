@@ -5,6 +5,11 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../components/components.module';
 import { RouterModule } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
+import { BlogViewDetailComponent } from './blog-view-detail/blog-view-detail.component';
+import { UsComponent } from './us/us.component';
+import { ServicesComponent } from './services/services.component';
+import { SoftwareComponent } from './software/software.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 
@@ -12,7 +17,12 @@ import { BlogComponent } from './blog/blog.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    BlogViewDetailComponent,
+    UsComponent,
+    ServicesComponent,
+    SoftwareComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +32,8 @@ import { BlogComponent } from './blog/blog.component';
   ],
   exports: [
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    BlogViewDetailComponent
   ]
 })
 export class ViewsModule { }

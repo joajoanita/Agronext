@@ -1,0 +1,12 @@
+.height-img{
+    height: 75%;
+    object-fit: cover;
+}
+
+.height-div{
+    height: 500px;
+    margin-bottom: 2rem;
+    width: 300px;
+}
+
+

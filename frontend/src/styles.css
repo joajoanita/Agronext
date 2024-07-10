@@ -46,7 +46,10 @@ body{
     width: 90% !important;
 }
 
-
+.bg-green{
+  background-color: #0B650C;
+  color: white;
+}
 h1{
     font-size: 49px;
 }
@@ -58,6 +61,8 @@ h3{
 p {
     font-size: 1.25rem; /* Tamaño de texto base */
   }
+
+
 
   @media (max-width: 1200px) {
     p {
@@ -71,6 +76,7 @@ p {
     }
   }
 
+  
   @media (max-width: 992px) {
     p {
       font-size: 1rem; /* Ajuste para pantallas medianas */

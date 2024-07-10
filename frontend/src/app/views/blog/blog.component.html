@@ -6,15 +6,32 @@
 </div>
 
 
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <h2>Listado de Blog Posts</h2>
     <ul class="list-group">
-      <li *ngFor="let post of blogPosts" class="list-group-item">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
-        <p>Etiquetas: {{ post.blogTag }}</p>
+      <li *ngFor="let blog of blogPosts" class="list-group-item">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.description }}</p>
+        <p>Etiquetas: {{ blog.blogTag }}</p>
+        <button type="button" class="btn btn-dark-green" [routerLink]="['/blogViewDetail', blog.id]">Ver en detalle</button>
+        <button class="btn btn-dark-green" (click)="onDelete(blog.blogId)">Eliminar</button>
       </li>
     </ul>
+</div>
+ -->
+
+ <section class="container">
+  <h1 class="green text-uppercase mt-3">Blog</h1>
+  <div class="row"  >
+    <div class="col-auto d-flex  "  *ngFor="let blog of blogPosts" >
+      <div class="bg-white rounded-4 height-div justify-content-sm-center">
+        <img class="rounded-top-4 w-100 img-fluid img-thumbnail" [src]="getImageUrl(blog.blogImage)" alt="{{ blog.title }}" style="height: 50%;">
+        <h2 class="text-uppercase mx-5 my-2 green">{{blog.title}}</h2>
+        <h6 class="text-uppercase mx-5 my-2 light-green">{{blog.blogTag}}</h6>
+        <p class="mx-5 my-2">Creado por: {{blog.id_user}}</p>
+        <button type="button" class="btn btn-dark-green justify-content-end" [routerLink]="['/blogViewDetail', blog.id]">Ver en detalle</button>
+        <button class="btn btn-danger mx-4" (click)="onDelete(blog.blogId)">Eliminar</button>
+      </div>
+    </div>
   </div>
-
-
+</section>

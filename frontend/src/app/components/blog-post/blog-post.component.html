@@ -1,7 +1,7 @@
 <!-- Aquí vendrá un formulario para la creación del blog -->
 <div class="container mt-3">
   <div class=" d-flex justify-content-end">
-    <button type="button" class="btn btn-dark-green shadow" routerLink="/blog">Volver a atrás</button>
+    <button type="button" class="btn btn-dark-green shadow" routerLink="/blog">Volver atrás</button>
   </div>
     <h2 class="fw-bold text-uppercase ">Añadir Nuevo Blog Post</h2>
     <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
@@ -15,7 +15,7 @@
       </div>
       <div class="mb-3">
         <label for="blogImage" class="form-label">Imagen del Blog</label>
-        <input type="text" id="blogImage" class="form-control" placeholder="URL de la imagen del blog" formControlName="blogImage">
+        <input type="file" id="blogImage" class="form-control" placeholder="URL de la imagen del blog" formControlName="blogImage" (change)="onFileSelected($event)">
       </div>
       <div class="mb-3">
         <label for="blogTag" class="form-label">Etiqueta del Blog</label>

@@ -40,14 +40,28 @@ export class AuthService {
     return this.http.get('http://127.0.0.1:8000/api/auth/user-profile');
   }
 
-  //Hacer post de blog
+  //Hacer post de blog (CREATE)
   blogPosts(postData: any): Observable<any> { 
     return this.http.post('http://127.0.0.1:8000/api/auth/blogPost', postData);
   }
 
+  // Recoger los blogPost añadidos (READ)
   getBlogPosts(): Observable<any> {
     return this.http.get('http://127.0.0.1:8000/api/auth/blogPost');
   }
 
+  // Recoger los blogPost añadidos por ID(READ)
+  getBlogPostById(id:number): Observable<any>{
+    return this.http.get(`http://127.0.0.1:8000/api/auth/blogPost/${id}`);
+  }
+
+  // Borrar los blog post (DELETE)
+  deleteBlogPost(blogId: number): Observable<any>{
+    return this.http.delete(`http://127.0.0.1:8000/api/auth/blogPost/${blogId}`);
+  }
+
+  updateBlogPost(updateBlogPost: any): Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/api/auth/blogPost', updateBlogPost)
+  }
   
 }
